@@ -343,9 +343,8 @@ h1, h2, h3, h4 {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: url('') center/cover no-repeat;
-  opacity: 0.15;
-  /* PLACEHOLDER: If you add a hero background image, set the URL above */
+  background: url('../images/banner.jpeg') center/cover no-repeat;
+  opacity: 0.25;
 }
 
 .hero__content {
