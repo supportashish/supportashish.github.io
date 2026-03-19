@@ -518,13 +518,6 @@ h1, h2, h3, h4 {
   border-radius: 8px;
 }
 
-.card__logo {
-  max-width: 160px;
-  height: 48px;
-  margin-bottom: 1rem;
-  object-fit: contain;
-}
-
 .card__contact {
   margin-bottom: 0.5rem;
 }
