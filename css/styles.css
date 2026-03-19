@@ -129,6 +129,19 @@ h1, h2, h3, h4 {
   margin-right: auto;
 }
 
+.section__note {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  background: var(--color-primary-light);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section__subtitle-heading {
   font-family: var(--font-heading);
   font-size: 1.4rem;
@@ -416,6 +429,14 @@ h1, h2, h3, h4 {
   margin-bottom: 0;
 }
 
+.about__location {
+  background: var(--color-primary-light);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
 /* ============================================
    Recovery Updates
    ============================================ */
@@ -460,6 +481,13 @@ h1, h2, h3, h4 {
   border-radius: 8px;
   max-height: 300px;
   object-fit: cover;
+}
+
+.update-card__body video {
+  margin-top: 0.75rem;
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 400px;
 }
 
 /* ============================================
@@ -710,6 +738,29 @@ h1, h2, h3, h4 {
   margin: 0 auto;
 }
 
+.visitation__hospital {
+  background: var(--color-white);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.visitation__hospital h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-dark);
+}
+
+.visitation__hospital p {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-light);
+}
+
+.visitation__hospital .btn {
+  margin-top: 0.5rem;
+}
+
 .visitation__hours {
   background: var(--color-white);
   border-radius: var(--card-radius);
@@ -863,6 +914,12 @@ h1, h2, h3, h4 {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.9);
   color: var(--color-white);
+}
+
+.footer__qr {
+  max-width: 120px;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
 }
 
 .footer__bottom {
