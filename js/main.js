@@ -66,16 +66,35 @@
         // Build gallery items
         photos.forEach(function (photo) {
           var link = document.createElement('a');
-          link.href = 'photos/' + photo.src;
           link.classList.add('gallery__item', 'glightbox');
-          link.setAttribute('data-glightbox', 'title: ' + (photo.alt || ''));
 
-          var img = document.createElement('img');
-          img.src = 'photos/' + photo.src;
-          img.alt = photo.alt || 'Photo of Ashish';
-          img.loading = 'lazy';
+          if (photo.type === 'video') {
+            link.href = 'photos/' + photo.src;
+            link.setAttribute('data-glightbox', 'title: ' + (photo.alt || '') + '; type: video');
 
-          link.appendChild(img);
+            var videoThumb = document.createElement('div');
+            videoThumb.classList.add('gallery__video-thumb');
+            videoThumb.innerHTML = '<span class="gallery__play-icon">&#9654;</span>';
+
+            var video = document.createElement('video');
+            video.src = 'photos/' + photo.src;
+            video.muted = true;
+            video.preload = 'metadata';
+            videoThumb.insertBefore(video, videoThumb.firstChild);
+
+            link.appendChild(videoThumb);
+          } else {
+            link.href = 'photos/' + photo.src;
+            link.setAttribute('data-glightbox', 'title: ' + (photo.alt || ''));
+
+            var img = document.createElement('img');
+            img.src = 'photos/' + photo.src;
+            img.alt = photo.alt || 'Photo of Ashish';
+            img.loading = 'lazy';
+
+            link.appendChild(img);
+          }
+
           galleryGrid.appendChild(link);
         });
 
