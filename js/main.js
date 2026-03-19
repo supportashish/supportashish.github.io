@@ -70,7 +70,7 @@
 
           if (photo.type === 'video') {
             link.href = 'photos/' + photo.src;
-            link.setAttribute('data-glightbox', 'title: ' + (photo.alt || '') + '; type: video');
+            link.setAttribute('data-glightbox', 'type: video');
 
             var videoThumb = document.createElement('div');
             videoThumb.classList.add('gallery__video-thumb');
@@ -85,7 +85,6 @@
             link.appendChild(videoThumb);
           } else {
             link.href = 'photos/' + photo.src;
-            link.setAttribute('data-glightbox', 'title: ' + (photo.alt || ''));
 
             var img = document.createElement('img');
             img.src = 'photos/' + photo.src;
