@@ -479,15 +479,39 @@ h1, h2, h3, h4 {
 .update-card__body img {
   margin-top: 0.75rem;
   border-radius: 8px;
-  max-height: 300px;
+  max-width: 100%;
   object-fit: cover;
 }
 
 .update-card__body video {
   margin-top: 0.75rem;
   border-radius: 8px;
-  max-width: 100%;
+  width: 100%;
   max-height: 400px;
+}
+
+.update-card__media {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.update-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 0;
+}
+
+.update-card__media--single {
+  grid-template-columns: 1fr;
+}
+
+.update-card__media--single img {
+  max-height: 400px;
+  object-fit: contain;
 }
 
 /* ============================================
