@@ -344,17 +344,16 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background: url('../images/banner.jpeg') center/cover no-repeat;
-  opacity: 0.25;
+  opacity: 0.35;
 }
 
 .hero__content {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: var(--card-radius);
   padding: 3rem 2.5rem;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .hero__title {
@@ -364,7 +363,6 @@ h1, h2, h3, h4 {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
 }
 
 .hero__subtitle {
