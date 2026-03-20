@@ -536,11 +536,16 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+}
+
+.card .btn {
+  margin-top: auto;
 }
 
 .card__icon {
