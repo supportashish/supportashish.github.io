@@ -820,7 +820,7 @@ h1, h2, h3, h4 {
    ============================================ */
 .gallery__featured {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -840,7 +840,7 @@ h1, h2, h3, h4 {
 
 .gallery__featured-item img {
   width: 100%;
-  height: 250px;
+  height: 320px;
   object-fit: cover;
   display: block;
 }
