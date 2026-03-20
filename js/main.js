@@ -110,6 +110,20 @@
   loadGallery();
 
   // ============================================
+  // Encouragement Form Toggle
+  // ============================================
+  var encouragementToggle = document.getElementById('encouragementToggle');
+  var encouragementForm = document.getElementById('encouragementForm');
+
+  if (encouragementToggle && encouragementForm) {
+    encouragementToggle.addEventListener('click', function () {
+      var isVisible = encouragementForm.style.display !== 'none';
+      encouragementForm.style.display = isVisible ? 'none' : 'block';
+      encouragementToggle.textContent = isVisible ? '💬 Send a Message' : '✕ Close Form';
+    });
+  }
+
+  // ============================================
   // Share Button
   // ============================================
   var shareBtn = document.getElementById('shareBtn');
