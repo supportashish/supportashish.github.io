@@ -735,6 +735,69 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
+   FAQ
+   ============================================ */
+.faq__list {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  background: var(--color-white);
+  border-radius: var(--card-radius);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.faq__item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faq__item[open] {
+  box-shadow: var(--shadow-md);
+}
+
+.faq__question {
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq__item[open] .faq__question::after {
+  content: '−';
+}
+
+.faq__answer {
+  padding: 0 1.5rem 1.25rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ============================================
    Photo Gallery
    ============================================ */
 .gallery__grid {
