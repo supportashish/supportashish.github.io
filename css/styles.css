@@ -743,6 +743,10 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-sm);
 }
 
+.encouragement__form--hidden {
+  display: none;
+}
+
 .encouragement__form iframe {
   display: block;
   border: none;

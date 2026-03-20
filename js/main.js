@@ -117,9 +117,14 @@
 
   if (encouragementToggle && encouragementForm) {
     encouragementToggle.addEventListener('click', function () {
-      var isVisible = encouragementForm.style.display !== 'none';
-      encouragementForm.style.display = isVisible ? 'none' : 'block';
-      encouragementToggle.textContent = isVisible ? '💬 Send a Message' : '✕ Close Form';
+      var isHidden = encouragementForm.classList.contains('encouragement__form--hidden');
+      if (isHidden) {
+        encouragementForm.classList.remove('encouragement__form--hidden');
+        encouragementToggle.textContent = 'Close Form';
+      } else {
+        encouragementForm.classList.add('encouragement__form--hidden');
+        encouragementToggle.textContent = 'Send a Message';
+      }
     });
   }
 

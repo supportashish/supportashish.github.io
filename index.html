@@ -361,8 +361,8 @@
 
       <div class="encouragement__cta">
         <p>Want to send Ashish a message? You can choose to share it publicly on the site or keep it private just for him.</p>
-        <button class="btn btn--primary btn--lg" id="encouragementToggle" onclick="var f=document.getElementById('encouragementForm');var v=f.style.display!=='none';f.style.display=v?'none':'block';this.textContent=v?'💬 Send a Message':'✕ Close Form';">💬 Send a Message</button>
-        <div class="encouragement__form" id="encouragementForm" style="display: none;">
+        <button class="btn btn--primary btn--lg" id="encouragementToggle" type="button">Send a Message</button>
+        <div class="encouragement__form encouragement__form--hidden" id="encouragementForm">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4sxZpVOj2PtzlLFjlnrIKe-m57RCeRm0Nv7IjvyNoVgVtCg/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0" title="Words of Encouragement Form">Loading…</iframe>
         </div>
       </div>
