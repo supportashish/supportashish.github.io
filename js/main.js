@@ -60,11 +60,33 @@
       .then(function (photos) {
         if (!Array.isArray(photos) || photos.length === 0) return;
 
-        // Hide the "coming soon" message
-        if (galleryEmpty) galleryEmpty.style.display = 'none';
+        // Featured photos already in HTML — skip them in the masonry grid
+        var featuredFiles = [
+          '5f1337d2-7227-43e1-b5d8-4727b3e2503c.jpeg',
+          '598c23bb-4524-4f91-8a3c-49a61f17eab1.jpeg',
+          '764dbae0-8705-4024-9dac-8408efb13539.jpeg',
+          '1190725738164238141.jpg',
+          '1930232854322823112.jpg',
+          'bff7c8af-6fdf-46a4-aff4-cb50866682a1.jpeg',
+          'FE73196B-DC0A-4F78-A7B8-D593EF11F331_1_105_c.jpeg',
+          'DBF28861-4092-4D83-9C0A-E76A18F5F622_1_105_c.jpeg'
+        ];
 
-        // Build gallery items
-        photos.forEach(function (photo) {
+        var remaining = photos.filter(function (p) {
+          return featuredFiles.indexOf(p.src) === -1;
+        });
+
+        if (remaining.length === 0 && featuredFiles.length > 0) {
+          if (galleryEmpty) galleryEmpty.style.display = 'none';
+        }
+
+        if (remaining.length > 0) {
+          // Hide the "coming soon" message
+          if (galleryEmpty) galleryEmpty.style.display = 'none';
+        }
+
+        // Build gallery items for remaining photos
+        remaining.forEach(function (photo) {
           var link = document.createElement('a');
           link.classList.add('gallery__item', 'glightbox');
 
