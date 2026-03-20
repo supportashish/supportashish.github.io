@@ -69,7 +69,8 @@
           '1930232854322823112.jpg',
           'bff7c8af-6fdf-46a4-aff4-cb50866682a1.jpeg',
           'FE73196B-DC0A-4F78-A7B8-D593EF11F331_1_105_c.jpeg',
-          'DBF28861-4092-4D83-9C0A-E76A18F5F622_1_105_c.jpeg'
+          'DBF28861-4092-4D83-9C0A-E76A18F5F622_1_105_c.jpeg',
+          '43054b14-4010-4440-af0f-2f7e9f86d48c.jpeg'
         ];
 
         var remaining = photos.filter(function (p) {
