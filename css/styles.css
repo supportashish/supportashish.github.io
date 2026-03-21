@@ -834,9 +834,8 @@ h1, h2, h3, h4 {
    Words of Encouragement
    ============================================ */
 .encouragement__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
+  columns: 2;
+  column-gap: 1.25rem;
   max-width: 900px;
   margin: 0 auto 2rem;
 }
@@ -848,6 +847,8 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-sm);
   border-left: 4px solid var(--color-accent);
   transition: box-shadow 0.2s;
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
 }
 
 .encouragement__card:hover {
@@ -1245,6 +1246,10 @@ h1, h2, h3, h4 {
 @media (max-width: 768px) {
   :root {
     --section-padding: 3.5rem 0;
+  }
+
+  .encouragement__grid {
+    columns: 1;
   }
 
   /* Nav */
